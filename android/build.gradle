@@ -36,4 +36,24 @@ android {
 
 dependencies {
     implementation 'cn.jiguang.sdk:jpush-google:5.4.0'
+
+        // 接入华为厂商
+    implementation 'com.huawei.hms:push:6.12.0.300'
+    implementation 'cn.jiguang.sdk.plugin:huawei:5.4.0'// 极光厂商插件版本与接入 JPush 版本保持一致，下同
+    // 接入 VIVO 厂商
+    implementation 'cn.jiguang.sdk.plugin:vivo:5.4.0'
+    // 接入小米厂商
+    implementation 'cn.jiguang.sdk.plugin:xiaomi:5.4.0'
+    // 接入 OPPO 厂商
+    implementation 'cn.jiguang.sdk.plugin:oppo:5.4.0'
+    // 接入 荣耀 厂商
+    implementation 'cn.jiguang.sdk.plugin:honor:5.4.0'
+    //引入 libs 中的 aar，如果项目中有此依赖不需要重复引用
+    implementation fileTree(include: ['*.jar','*.aar'], dir: 'libs')
+
+
+    //OPPO 3.1.0 aar 及其以上版本需要添加以下依赖
+    implementation 'com.google.code.gson:gson:2.6.2'
+    implementation 'commons-codec:commons-codec:1.6'
+    implementation 'androidx.annotation:annotation:1.1.0'
 }
